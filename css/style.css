@@ -20,10 +20,10 @@ html, body{
     left: 53%;
 }
 .table {
-    width: 65%;
-    margin: 0 auto;
-    color:#ffffff;
+    width: 68%;
+    margin: 10px auto;
 }
+
 .col {
     font-size: 32px;
 }
@@ -36,5 +36,14 @@ footer {
     background: #242323;
     height: 300px;
 }
-
+.addBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #e77c48;
+}
+.addBtn:hover{
+    background-color: #e77c48;
+}
 

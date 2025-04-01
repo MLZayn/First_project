@@ -8,10 +8,22 @@ fetch("/First_project/js/entityes.json")
     for(let entity of entityes){
         out += `
             <tr>
-                <td>${entity.name}</td>
-                <td>${entity.count}</td>
+                <td style="background-color: #242323 !important; color: #ffffff">${entity.name}</td>
+                <td style="background-color: #242323 !important; color: #ffffff">${entity.count}</td>
             </tr>
         `;
     }
     placeholder.innerHTML = out;
 })
+
+window.addEventListener("DOMContentLoaded", event => {
+    console.log("DOM fully loaded and parsed")
+    const addBtn = document.querySelector(".addBtn1")
+  
+    const handleClick = () => {
+        var name = document.getElementById('name').value;
+		console.log(name);
+        var quantity = document.getElementById('quantity').value;
+		console.log(quantity);
+    }
+});
