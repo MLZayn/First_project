@@ -19,9 +19,11 @@ html, body{
     top: 2%;
     left: 53%;
 }
-.table {
+.table, tbody, thead, td, tr {
     width: 68%;
     margin: 10px auto;
+    background-color: #242323;
+    color: white
 }
 
 .col {

@@ -6,6 +6,8 @@
     <title>FoxHoleStorage</title>
     <link href="static/css/bootstrap.css" rel="stylesheet">
     <link href="static/css/style.css" rel="stylesheet">
+    {% csrf_token %}
+    
   </head>
   <body>
     <header>
@@ -67,8 +69,8 @@
     <table class="table table-bordered"  id="tableMassiv" data-stuff="{{stuff}}">
       <thead>
         <tr >
-          <th style="background-color: #242323 !important; color: #ffffff" scope="col">Name</th>
-          <th style="background-color: #242323 !important; color: #ffffff" scope="col">Count</th>
+          <th  scope="col">Name</th>
+          <th  scope="col">Count</th>
         </tr>
       </thead>
       <tbody id="data-output">
