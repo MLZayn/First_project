@@ -28,7 +28,7 @@ class StuffView(generic.TemplateView):
               return context_data
          
          
-     def pathc(self, request, *args, **kwargs):
+     def patch(self, request, *args, **kwargs):
          with connection.cursor() as c:
               c.execute(
                    """
@@ -36,7 +36,7 @@ class StuffView(generic.TemplateView):
                          FROM foxholestorage
                    """
               )
-              result = c.fetchone
+              result = c.fetchone()[0]
               return JsonResponse(result, safe=False)  
          
      def put(self, request, *args, **kwargs):

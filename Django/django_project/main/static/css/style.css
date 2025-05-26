@@ -19,11 +19,20 @@ html, body{
     top: 2%;
     left: 53%;
 }
-.table, tbody, thead, td, tr {
+.table{
     width: 68%;
     margin: 10px auto;
-    background-color: #242323;
-    color: white
+}
+
+.selectable-table th, .table td {
+    background: #242323;
+    color: #ffffff;
+}
+.selectable-table tr {
+    cursor: pointer;
+}
+.selected tr {
+    background: #e6f7ff;
 }
 
 .col {
