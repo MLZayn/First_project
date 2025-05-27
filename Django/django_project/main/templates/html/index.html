@@ -79,11 +79,11 @@
             <form>
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Material:</label>
-                <input type="text" class="form-control" id="name">
+                <input type="text" class="form-control" id="changeName" readonly>
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">Quantity:</label>
-                <input type="text" class="form-control" id="quantity">
+                <input type="text" class="form-control" id="changeQuantity">
               </div>
             </form>
           </div>
@@ -96,14 +96,14 @@
     </div>
 
     
-    <table class="table table-bordered selectable-table" data-click-to-select="true" id="tableMassiv" data-stuff="{{stuff}}">
+    <table class="table table-hover table-bordered table-sm shadow" id="tableMassiv" data-stuff="{{stuff}}">
       <thead>
         <tr >
           <th  scope="col">Name</th>
           <th  scope="col">Count</th>
         </tr>
       </thead>
-      <tbody id="data-output">
+      <tbody id="data-output"  class="can-select">
 
       </tbody>
     </table>

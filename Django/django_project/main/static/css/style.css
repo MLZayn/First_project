@@ -24,16 +24,11 @@ html, body{
     margin: 10px auto;
 }
 
-.selectable-table th, .table td {
+.table th, .table td {
     background: #242323;
     color: #ffffff;
 }
-.selectable-table tr {
-    cursor: pointer;
-}
-.selected tr {
-    background: #e6f7ff;
-}
+
 
 .col {
     font-size: 32px;
@@ -58,3 +53,25 @@ footer {
     background-color: #e77c48;
 }
 
+tbody.can-select tr[data-selected] td {
+    box-shadow: inset 0px 5px 2px -3px #e77c48, inset 0px -5px 2px -3px #e77c48;
+}
+
+tbody.can-select tr[data-selected] td:first-of-type {
+    box-shadow: inset 1px 2px 2px 0px #e77c48, inset 1px -2px 2px 0px #e77c48;
+}
+
+tbody.can-select tr[data-selected] td:last-of-type {
+    box-shadow: inset -1px 2px 2px 0px #e77c48, inset -1px -2px 2px 0px #e77c48;
+}
+
+tbody.can-select tr[data-selected] tr:not([data-selected]) {
+    cursor: pointer
+}
+
+input[readonly] {
+    background-color: rgb(230,230,230) !important;
+    border: none;
+    outline: none;
+    cursor: default;
+}
