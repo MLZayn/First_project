@@ -6,23 +6,27 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.core.serializers.json import DjangoJSONEncoder
+import json
+from django.views.decorators.csrf import csrf_exempt
+from django.views import generic
+from django.db import connection
 
 def index(request):
      return render(request, 'html/index.html')
  
-# def index(request):
-#     bob = Person("Bob", 41)
-#     return JsonResponse(bob, safe=False, encoder=PersonEncoder)
- 
-# class Person:
-  
-#     def __init__(self, name, age):
-#         self.name = name    # имя человека
-#         self.age = age        # возраст человека
- 
-# class PersonEncoder(DjangoJSONEncoder):
-#     def default(self, obj):
-#         if isinstance(obj, Person):
-#             return {"name": obj.name, "age": obj.age}
-#             # return obj.__dict__
-#         return super().default(obj)
+class StuffView(generic.TemplateView):
+    template_name = 'html/index.html'
+    
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        with connection.cursor() as c:
+            c.execute(
+                '''
+                SELECT jsonb_agg(jsonb_build_array(item_name, quantity)) AS j
+                    FROM practice
+                    
+                '''
+                
+            )
+            context_data['stuff'] = c.fetchone()[0]
+            return context_data

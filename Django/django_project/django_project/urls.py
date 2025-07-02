@@ -23,4 +23,6 @@ from main import views
   
 urlpatterns = [
     path("", views.index),
+    path('get-json/', views.get_json, name='get_json'),
+    path('update-json/', views.update_json, name='update_json'),
 ]

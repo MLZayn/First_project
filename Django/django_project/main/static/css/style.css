@@ -47,3 +47,7 @@ footer {
     background-color: #e77c48;
 }
 
+select:invalid, input:invalid, textarea:invalid {
+    box-shadow: 0 0 1.5px 2px red;
+}
+

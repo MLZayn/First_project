@@ -52,7 +52,7 @@
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">Quantity:</label>
-                <input type="text" class="form-control" id="quantity">
+                <input type="text" class="form-control" id="quantity" pattern="[0-9]{1,9}">
               </div>
             </form>
           </div>
@@ -64,7 +64,7 @@
       </div>
     </div>
     
-    <table class="table table-bordered">
+    <table id="tableMassive" class="table table-bordered" data-stuff="{{stuff}}">
       <thead>
         <tr >
           <th style="background-color: #242323 !important; color: #ffffff" scope="col">Name</th>
