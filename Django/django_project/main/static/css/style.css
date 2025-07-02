@@ -19,10 +19,16 @@ html, body{
     top: 2%;
     left: 53%;
 }
-.table {
+.table{
     width: 68%;
     margin: 10px auto;
 }
+
+.table th, .table td {
+    background: #242323;
+    color: #ffffff;
+}
+
 
 .col {
     font-size: 32px;
@@ -47,7 +53,32 @@ footer {
     background-color: #e77c48;
 }
 
+<<<<<<< HEAD
 select:invalid, input:invalid, textarea:invalid {
     box-shadow: 0 0 1.5px 2px red;
 }
 
+=======
+tbody.can-select tr[data-selected] td {
+    box-shadow: inset 0px 5px 2px -3px #e77c48, inset 0px -5px 2px -3px #e77c48;
+}
+
+tbody.can-select tr[data-selected] td:first-of-type {
+    box-shadow: inset 1px 2px 2px 0px #e77c48, inset 1px -2px 2px 0px #e77c48;
+}
+
+tbody.can-select tr[data-selected] td:last-of-type {
+    box-shadow: inset -1px 2px 2px 0px #e77c48, inset -1px -2px 2px 0px #e77c48;
+}
+
+tbody.can-select tr[data-selected] tr:not([data-selected]) {
+    cursor: pointer
+}
+
+input[readonly] {
+    background-color: rgb(230,230,230) !important;
+    border: none;
+    outline: none;
+    cursor: default;
+}
+>>>>>>> 305a8b92e414b17fab04b32ef5ae14de15f13c30

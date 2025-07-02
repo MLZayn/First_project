@@ -77,8 +77,13 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+<<<<<<< HEAD
         'NAME': 'postgres',
         'USER': 'postgres',
+=======
+        'NAME': 'practice',
+        'USER': 'mlzayn',
+>>>>>>> 305a8b92e414b17fab04b32ef5ae14de15f13c30
         'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '5432',
@@ -120,7 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

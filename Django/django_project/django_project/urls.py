@@ -17,12 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main import views
-  
 from django.urls import path
-from main import views
+
   
 urlpatterns = [
+<<<<<<< HEAD
     path("", views.index),
     path('get-json/', views.get_json, name='get_json'),
     path('update-json/', views.update_json, name='update_json'),
 ]
+=======
+    path("", views.StuffView.as_view()),
+]
+
+>>>>>>> 305a8b92e414b17fab04b32ef5ae14de15f13c30
